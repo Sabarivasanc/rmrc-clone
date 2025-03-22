@@ -272,3 +272,95 @@
     display: block;
     line-height: 1.5;
 }
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo > .img {
+        width: 120px;
+        height: auto;
+    }
+
+    .h2 {
+        position: static;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .h2 > .title {
+        font-size: 20px;
+        padding: 10px;
+        line-height: normal;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .menu li {
+        padding: 10px;
+    }
+
+    .banner {
+        height: auto;
+    }
+
+    .banner > .image {
+        height: auto;
+    }
+
+    .content {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .content > .para {
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin: 0 15px;
+    }
+
+    .shield {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .shield1 {
+        margin-bottom: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-content ul li {
+        padding: 10px 0;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .c-1 {
+        margin: 10px 0;
+    }
+
+    .c-2 {
+        left: 0;
+        width: 90%;
+        text-align: center;
+        bottom: 0;
+    }
+}
