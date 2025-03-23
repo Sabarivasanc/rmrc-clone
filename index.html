@@ -11,14 +11,22 @@
             margin: 0;
             padding: 0;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            position: relative;
         }
 
         .logo {
             height: auto;
             max-width: 100%;
-            vertical-align: top;
-            border: 0;
-            margin: 0 15px;
         }
 
         .logo > .img {
@@ -26,25 +34,11 @@
             height: auto;
         }
 
-        .navbar {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            position: relative;
-            padding: 10px;
-            align-items: center;
-        }
-
-        .h2 {
-            position: static;
-            margin: 10px;
-        }
-
         .h2 > .title {
             font-size: 24px;
             font-weight: 400;
-            padding: 10px;
-            line-height: 1.2;
+            text-align: center;
+            flex-grow: 1;
         }
 
         .menu-toggle {
@@ -59,11 +53,20 @@
         .menu {
             list-style: none;
             display: flex;
-            margin: 20px;
-            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
         }
 
         .menu li {
+            position: relative;
+            padding: 10px;
+        }
+
+        .icon {
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            font-weight: 500;
             padding: 10px;
         }
 
@@ -71,43 +74,8 @@
             background-color: #610005;
         }
 
-        .list:hover .dropdown-content {
-            display: block;
-            background-color: #32566c;
-        }
-
-        .list:hover .dropdown-content a {
-            color: white;
-            padding: 5px;
-            text-decoration: none;
-        }
-
-        .dropdown-content a:hover {
-            color: rgb(204, 204, 112) !important;
-        }
-
-        .dropdown-content a {
-            display: block;
-            text-align: left;
-            margin-top: 10px;
-            font-weight: 400;
-            font-size: 17.5px;
-            font-family: Helvetica, sans-serif;
-        }
-
         .list:hover > a {
             color: #fff;
-        }
-
-        .icon {
-            text-decoration: none;
-            font-size: 26px;
-            color: black;
-            font-weight: 300;
-        }
-
-        .list {
-            position: relative;
         }
 
         .dropdown-content {
@@ -115,12 +83,31 @@
             position: absolute;
             top: 100%;
             left: 0;
-            margin-top: 0;
-            min-width: 160px;
+            background-color: #32566c;
+            min-width: 200px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             padding: 15px;
+            z-index: 1000;
         }
 
+        .list:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            color: white;
+            padding: 5px 0;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: Helvetica, sans-serif;
+        }
+
+        .dropdown-content a:hover {
+            color: rgb(204, 204, 112);
+        }
+
+        /* Banner Styles */
         .banner {
             background-color: #610005;
             width: 100%;
@@ -134,32 +121,31 @@
             object-fit: cover;
         }
 
+        /* Content Styles */
         .content {
-            height: auto;
-            width: 100%;
             padding: 20px;
+            text-align: center;
         }
 
         .content > .para {
             font-size: 20px;
             font-weight: 350;
-            padding: 10px;
-            letter-spacing: 1px;
-            margin: 0;
             line-height: 1.6;
+            letter-spacing: 1px;
+            margin: 0 auto;
+            max-width: 800px;
         }
 
         .center-text {
             background-color: #610005;
             padding: 10px;
+            text-align: center;
         }
 
         .center-text > .topic {
-            text-align: center;
             color: white;
             font-size: 24px;
             font-weight: 700;
-            padding: 5px;
         }
 
         .video-content {
@@ -175,6 +161,7 @@
             aspect-ratio: 16/9;
         }
 
+        /* Shield Section */
         .shield {
             background-color: #610005;
             display: flex;
@@ -186,7 +173,6 @@
 
         .shield1 {
             flex: 1 1 200px;
-            align-items: center;
             text-align: center;
             min-width: 150px;
         }
@@ -205,91 +191,96 @@
             font-weight: 300;
         }
 
+        /* Footer Styles */
         .footer {
-            background-image: url(assets/images/footer-img.png);
-            background-size: cover;
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
         }
 
         .footer-logo {
             text-align: center;
-            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            width: 150px;
+            height: auto;
         }
 
         .footer-content {
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-around;
-            padding: 20px;
-            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
         }
 
         .footer-content ul {
             list-style: none;
+            padding: 0;
         }
 
         .footer-content ul li {
-            text-align: center;
-            padding: 5px 40px 10px;
+            margin: 10px 0;
         }
 
         .footer-content ul li a {
-            text-decoration: none;
             color: white;
+            text-decoration: none;
+            font-size: 16px;
             font-family: Helvetica, sans-serif;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 40px;
+        }
+
+        .footer-content ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+            text-align: center;
         }
 
         .certi {
-            display: inline-block;
-            margin-left: 10rem;
+            margin: 10px;
+        }
+
+        .certi img {
+            width: 100px;
+            height: auto;
+        }
+
+        .Powered {
+            color: white;
+            font-size: 14px;
+            margin-top: 5px;
         }
 
         .contact {
             display: flex;
             flex-wrap: wrap;
-            margin: 0;
-            float: none;
-            justify-content: center;
-            gap: 15px;
+            gap: 20px;
+            margin: 10px;
         }
 
         .c-1 {
-            margin: 0;
             color: white;
-            padding: 5px;
+            font-size: 14px;
         }
 
         .c-2 {
-            position: static;
-            color: white;
-            width: 100%;
+            margin: 10px;
             text-align: center;
-            padding: 10px;
         }
 
-        .Powered {
+        .address, .copy {
             color: white;
-        }
-
-        .copy {
-            font-size: 12px;
-            padding: 30px 0 0 60px;
-            display: block;
-            line-height: 1.5;
-        }
-
-        .fc-1 ul li a:hover, .fc-2 ul li a:hover, .fc-3 ul li a:hover {
-            border-bottom: 1px solid white;
-        }
-
-        .c-1:hover, .address:hover {
-            border-bottom: 1px solid white;
-        }
-
-        .address {
-            margin-bottom: 10px;
+            font-size: 14px;
+            margin: 5px 0;
         }
 
         /* Media Queries */
@@ -302,13 +293,12 @@
                 display: none;
                 flex-direction: column;
                 width: 100%;
-                margin: 0;
-                padding: 0;
                 background-color: #fff;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 z-index: 1000;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             }
 
             .menu.active {
@@ -316,18 +306,25 @@
             }
 
             .menu li {
-                padding: 10px 0;
-                width: 100%;
-                text-align: left;
+                padding: 0;
                 border-bottom: 1px solid #eee;
+            }
+
+            .menu li a {
+                display: block;
+                padding: 15px 20px;
             }
 
             .dropdown-content {
                 position: static;
                 width: 100%;
                 box-shadow: none;
-                padding: 10px 20px;
                 background-color: #f5f5f5;
+                padding: 10px 30px;
+            }
+
+            .dropdown-content a {
+                color: #333;
             }
 
             .list:hover .dropdown-content {
@@ -339,21 +336,11 @@
             }
 
             .navbar {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-
-            .h2 {
-                flex-grow: 1;
-                text-align: center;
+                flex-wrap: wrap;
             }
 
             .content > .para {
                 font-size: 16px;
-            }
-
-            .shield {
-                padding: 20px;
             }
 
             .footer-content {
@@ -361,9 +348,17 @@
                 text-align: center;
             }
 
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+            }
+
             .certi {
-                margin-left: 0;
-                margin-bottom: 20px;
+                margin: 0;
+            }
+
+            .contact {
+                justify-content: center;
             }
         }
 
@@ -374,10 +369,6 @@
 
             .h2 > .title {
                 font-size: 18px;
-            }
-
-            .icon {
-                font-size: 20px;
             }
 
             .content > .para {
@@ -391,16 +382,12 @@
             .shield-p1, .shield-p2, .shield-p3, .shield-p4 {
                 font-size: 16px;
             }
-
-            .footer-content ul li a {
-                font-size: 16px;
-            }
         }
     </style>
 </head>
 
 <body>
-    <!--nav section -->
+    <!-- Navbar Section -->
     <section>
         <nav class="navbar">
             <span class="logo"><img class="img" src="assets/images/ucrc-logo.png" alt="LOGO"></span>
@@ -409,7 +396,7 @@
             </div>
             <button class="menu-toggle">☰</button>
             <ul class="menu" id="menu">
-                <li class="list"><a class="icon" id="home" href="#">Home</a></li>
+                <li class="list"><a class="icon" href="#">Home</a></li>
                 <li class="list"><a class="icon" href="#">About us</a>
                     <div class="dropdown-content">
                         <a href="#">Board of Directors</a>
@@ -453,7 +440,7 @@
             successfully teaming with nonprofit and for-profit developers, construction lenders and investors.</p>
     </div>
 
-    <!-- video -->
+    <!-- Video -->
     <section class="center-text">
         <h2 class="topic">Check out why RMCRC is important</h2>
     </section>
@@ -487,10 +474,10 @@
         </div>
     </section>
 
-    <!-- footer -->
+    <!-- Footer -->
     <section class="footer">
         <div class="footer-logo">
-            <img src="assets/images/white_logo.png" alt="">
+            <img src="assets/images/white_logo.png" alt="Rocky Mountain CRC">
         </div>
         <div class="footer-content">
             <div class="fc-1">
@@ -523,7 +510,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <span class="certi"><img src="assets/images/Certified-logo1.jpg" alt="">
+            <span class="certi">
+                <img src="assets/images/Certified-logo1.jpg" alt="Certified CDFI">
                 <p class="Powered">Powered By Velozion</p>
             </span>
             <div class="contact">
@@ -531,13 +519,11 @@
                 <p class="c-1">EMAIL: lending@rmcrc.org</p>
                 <p class="c-1">FAX: 801-366-0402</p>
             </div>
-            <div>
-                <div class="c-2">
-                    <p class="address">ADDRESS: 64 E. Winchester Street, Suite 230, Salt Lake City, Utah 84107</p>
-                    <span class="copy">© 2019 Rocky Mountain Community Reinvestment Corporation</span>
-                </div>
+            <div class="c-2">
+                <p class="address">ADDRESS: 64 E. Winchester Street, Suite 230, Salt Lake City, Utah 84107</p>
+                <span class="copy">© 2019 Rocky Mountain Community Reinvestment Corporation</span>
             </div>
-        </div><br>
+        </div>
     </section>
 
     <script>
